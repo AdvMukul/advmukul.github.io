@@ -1,0 +1,133 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #e0e0e0;
+    color: #404258; 
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: #f4f4f4; 
+    padding: 2.5rem;
+    border-radius: 15px;
+    transition: box-shadow 0.3s ease-in-out;
+    
+}
+
+.container:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); 
+}
+
+.profile {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.profile img {
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile img:hover {
+    transform: scale(1.05);
+}
+
+.info h1 {
+    font-size: 3.2rem;
+    margin: 0;
+    color: #404258; 
+    font-weight: 700;
+    text-align: left;
+}
+
+a {
+    color: #00449e;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #e63946; 
+    text-decoration: underline;
+}
+
+.cv-link {
+    color: #e63946;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.note {
+    font-style: italic;
+    color: #777;
+    font-size: 1rem;
+}
+
+hr {
+    margin: 2rem 0;
+    border: none;
+    border-top: 2px solid #aaaaaa;
+}
+
+.papers ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.papers li {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.papers li::before {
+    content: "• ";
+    color: #e63946; 
+}
+
+.Organization {
+    font-style: italic;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+
+footer {
+    text-align: center;
+    font-size: 0.7rem;
+    color: #aaa;
+    margin-top: 3rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid #aaaaaa;
+}
+
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .info h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}
