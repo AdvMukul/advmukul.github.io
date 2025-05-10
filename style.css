@@ -181,18 +181,74 @@ hr {
   -webkit-overflow-scrolling: touch;
 }
 
+/* Testimonials Section Carousel */
+.testimonials-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch;
+  padding: 2rem 1rem;
+  max-width: 100%;
+}
+
+.testimonial-card {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.read-more-tile {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  background: #fafafa;
+  border: 2px dashed var(--primary);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: var(--radius);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.read-more-tile:hover {
+  background-color: var(--light-bg);
+  transform: translateY(-5px);
+}
+
+
 .blog-card-link,
 .blog-card,
 .more-tile {
   flex: 0 0 300px;
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   scroll-snap-align: start;
+  background: #fafafa;
+  border: 2px dashed var(--primary);
+  color: var(--primary);
   display: flex;
-  flex-direction: column;
-  height: 100%; /* Ensures uniform height */
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: var(--radius);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  text-align: center;
 }
 
 .blog-card img {
@@ -222,17 +278,19 @@ hr {
 
 .more-tile {
   flex: 0 0 300px;
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   scroll-snap-align: start;
+  background: #fafafa;
+  border: 2px dashed var(--primary);
+  color: var(--primary);
   display: flex;
-  flex-direction: column;
-  height: 100%;
-  align-self: center;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: var(--radius);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  text-align: center;
 }
-
 .more-tile .card-content.centered {
   padding: 15px;
   display: flex;
