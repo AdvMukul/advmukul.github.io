@@ -118,9 +118,13 @@ hr {
   margin: 0;
 }
 
+.description{
+  margin-top: 10px;
+}
+
 /* Optional: use <br> for line break without space */
 .info p {
-  margin: 0; /* Prevent extra spacing */
+  margin: 10px  ; /* Prevent extra spacing */
 }
 
 /* Align links, keep email and links grouped */
