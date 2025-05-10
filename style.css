@@ -177,7 +177,8 @@ hr {
   gap: 20px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -211,7 +212,8 @@ hr {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
-.read-more-tile {
+.read-more-tile,
+.more-tile {
   flex: 0 0 300px;
   scroll-snap-align: start;
   background: #fafafa;
@@ -224,6 +226,24 @@ hr {
   border-radius: var(--radius);
   transition: background-color 0.3s ease, transform 0.3s ease;
   cursor: pointer;
+  text-align: center;
+}
+
+.read-more-tile:hover,
+.more-tile:hover {
+  background-color: var(--light-bg);
+  transform: translateY(-5px);
+}
+
+.read-more-tile .card-content.centered,
+.more-tile .card-content.centered {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  height: 100%;
   text-align: center;
 }
 
