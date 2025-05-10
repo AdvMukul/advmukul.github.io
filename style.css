@@ -177,7 +177,6 @@ hr {
   padding: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
   flex-grow: 1;
 }
@@ -203,6 +202,7 @@ hr {
   display: flex;
   flex-direction: column;
   height: 100%;
+  align-self: center;
 }
 
 .more-tile .card-content.centered {
