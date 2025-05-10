@@ -101,7 +101,7 @@ hr {
   margin: 0; /* Prevent extra spacing */
 }
 
-/* Align links, keep email and links grouped */
+/* Align links to left, keep email and links grouped */
 .links {
   text-align: right;
   margin-top: 1rem;
