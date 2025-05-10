@@ -237,18 +237,14 @@ hr {
 .blog-card,
 .more-tile {
   flex: 0 0 300px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   scroll-snap-align: start;
-  background: #fafafa;
-  border: 2px dashed var(--primary);
-  color: var(--primary);
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  border-radius: var(--radius);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
-  text-align: center;
+  flex-direction: column;
+  height: 100%; /* Ensures uniform height */
 }
 
 .blog-card img {
