@@ -90,8 +90,13 @@ hr {
 }
 
 /* Remove space between Advocate and Delhi High Court */
-.highlight {
+.profession{
   font-size: 2rem;
+  display: inline; /* Inline removes the line break and space */
+  margin: 0;
+}
+.practice-place{
+  font-size: 1.5rem;
   display: inline; /* Inline removes the line break and space */
   margin: 0;
 }
@@ -101,7 +106,7 @@ hr {
   margin: 0; /* Prevent extra spacing */
 }
 
-/* Align links to left, keep email and links grouped */
+/* Align links, keep email and links grouped */
 .links {
   text-align: right;
   margin-top: 1rem;
