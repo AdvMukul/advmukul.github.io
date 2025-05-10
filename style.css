@@ -61,9 +61,8 @@ hr {
 
 /* Profile Section */
 .info {
-    text-align: center;
+    text-align: left; /* Align all text to the left */
 }
-
 
 .profile {
   display: flex;
@@ -86,34 +85,28 @@ hr {
 
 .info h1 {
   font-size: 4rem;
-  text-align: centre;
   font-weight: 700;
+  margin: 0; /* Remove default margin */
 }
 
-
-/* Target the "Advocate" and "Delhi High Court" text */
-.info p strong,
-.info p br + text {
-    font-size: 3rem;
-}
-
-/* Optional: ensure spacing between elements is clean */
-.info {
-    text-align: center;
-}
-
-/* Enlarging "Advocate" and "Delhi High Court" */
+/* Remove space between Advocate and Delhi High Court */
 .highlight {
-    font-size: 2rem;
-    display: block;
-   
+  font-size: 2rem;
+  display: inline; /* Inline removes the line break and space */
+  margin: 0;
 }
 
-/* Aligning only the links to the left */
-.links {
-    text-align: left;
-    margin-top: 1rem;
+/* Optional: use <br> for line break without space */
+.info p {
+  margin: 0; /* Prevent extra spacing */
 }
+
+/* Align links to left, keep email and links grouped */
+.links {
+  text-align: left;
+  margin-top: 1rem;
+}
+
 
 /* Section Titles */
 .section-title {
