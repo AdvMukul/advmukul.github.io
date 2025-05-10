@@ -14,6 +14,7 @@
 
 /* Reset */
 body {
+  overflow-x: hidden;
   font-family: 'Inter', sans-serif;
   background-color: var(--bg);
   color: var(--text-main);
@@ -344,6 +345,8 @@ footer {
   color: #999;
   margin-top: 3rem;
   padding: 1.5rem 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
   border-top: 1px solid #ddd;
 }
 
