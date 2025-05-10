@@ -150,18 +150,26 @@ hr {
 }
 
 .more-tile {
+  flex: 0 0 300px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  flex-direction: column;
+  height: 100%;
 }
 
 .more-tile .card-content.centered {
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  padding: 15px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  height: 100%;
+  text-align: center;
 }
 
 h3 {
