@@ -81,7 +81,7 @@ hr {
 
 .profile {
     display: flex;
-    gap: 10%;
+    gap: 40px;
     align-items: center;
     margin-bottom: 2rem;
     justify-content: flex-start;
