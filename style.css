@@ -100,6 +100,76 @@ hr {
     font-size: 1.1rem;
 }
 
+.practice-areas-section {
+  background: #faf7f7;
+  padding: 60px 20px;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+.practice-areas-section h2 {
+  font-size: 2.5rem;
+  color: #aa1b35;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.divider {
+  width: 100px;
+  height: 3px;
+  background: #aa1b35;
+  margin: 0 auto 40px;
+}
+
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.practice-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.practice-card:hover {
+  transform: translateY(-5px);
+}
+
+.practice-card .icon {
+  font-size: 2rem;
+  background: #aa1b35;
+  color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.practice-card h3 {
+  font-size: 1.2rem;
+  color: #600c1a;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.practice-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+
 .blog-slider {
   display: flex;
   gap: 20px;
