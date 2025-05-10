@@ -93,13 +93,6 @@ hr {
   color: var(--primary);
 }
 
-.divider {
-  width: 100px;
-  height: 3px;
-  background: var(--primary);
-  margin: 0 auto 2rem;
-}
-
 /* Paper List */
 .papers ul {
   list-style: none;
