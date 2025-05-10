@@ -50,11 +50,21 @@
                 <section id="contact">
           <h2>Contact Me</h2>
           <form action="https://formspree.io/f/mnndzwdg" method="POST" class="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <input type="subject" name="subject" placeholder="subject" required />
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+            <label for="name">NAME *</label>  
+            <input type="text" name="name" required />
+              
+            <label for="email">EMAIL ADDRESS *</label>
+            <input type="email" name="email"  required />
+
+            <label for="phone">PHONE *</label>
+            <input type="tel" id="phone" name="phone" required>
+                
+            <label for="subject">SUBJECT *</label>
+            <input type="subject" name="subject"  required />
+            
+            <label for="message">YOUR MESSAGE / QUERY *</label>
+            <textarea name="message" rows="5"  required></textarea>
+            <button type="submit">Submit</button>
           </form>
         </section>
 
