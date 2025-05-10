@@ -65,10 +65,12 @@ hr {
 }
 
 .profile {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  margin-bottom: 2rem;
+    display: flex;
+    gap: 7rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    justify-content: flex-start;
+    flex-direction: row;
 }
 
 .profile img {
@@ -109,7 +111,7 @@ hr {
 /* Align links, keep email and links grouped */
 .links {
   text-align: right;
-  margin-top: 4rem;
+  margin-top: 6rem;
 }
 
 /* Section Titles */
