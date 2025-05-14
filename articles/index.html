@@ -15,7 +15,7 @@
         <h1>Adv. Mukul Yadav <span>Delhi High Court</span></h1>
       </div>
       <div>
-        <input type="search" placeholder="Search..." />
+        <input type="search" id="searchInput" placeholder="Search articles..." />
       </div>
     </div>
   </div>
@@ -73,5 +73,26 @@
       </div>
     </aside>
   </main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const searchInput = document.getElementById('searchInput');
+    const articles = document.querySelectorAll('.articles article');
+
+    searchInput.addEventListener('input', function () {
+      const query = this.value.toLowerCase();
+
+      articles.forEach(article => {
+        const title = article.querySelector('h2').textContent.toLowerCase();
+        const body = article.querySelector('p').textContent.toLowerCase();
+
+        const matches = title.includes(query) || body.includes(query);
+
+        article.style.display = matches ? 'block' : 'none';
+      });
+    });
+  });
+</script>
+  
 </body>
 </html>
