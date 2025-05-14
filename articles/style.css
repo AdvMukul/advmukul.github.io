@@ -63,7 +63,7 @@ header {
 .logo {
   width: 60px;
   height: 60px;
-  background-color: var(--accent); /* Placeholder color */
+  background-color: white; /* Placeholder color */
   border-radius: 50%;
 }
 
