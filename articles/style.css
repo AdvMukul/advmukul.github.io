@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #f9f9f9;
+  color: #1a1a1a;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  background-color: #0c2d52;
+  color: white;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-family: serif;
+  margin: 0;
+  font-size: 2rem;
+}
+
+header h1 span {
+  display: block;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  margin-right: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+input[type="search"] {
+  float: right;
+  margin-top: -40px;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+main {
+  display: flex;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+.articles {
+  flex: 3;
+}
+
+article {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 3px solid #b3d4fc;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.meta {
+  font-size: 0.8rem;
+  color: #4c4c4c;
+}
+
+.tag {
+  color: green;
+  font-style: italic;
+}
+
+.tag.court {
+  color: #8a6d3b;
+}
+
+h2 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #0c2d52;
+}
+
+.sidebar {
+  flex: 1;
+}
+
+.sidebar h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.tags span {
+  display: inline-block;
+  background-color: #3e4f31;
+  color: white;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  margin: 3px;
+  border-radius: 3px;
+}
