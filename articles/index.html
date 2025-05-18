@@ -22,9 +22,9 @@
             <p class="page-description">Explore my latest legal insights and analysis on various topics.</p>
             <hr>
                    <div class="search-container">
-                        <input type="text" id="searchInput" placeholder="Search articles..." />
-                        <button onclick="searchArticles()">Search</button>
-                     </div>
+                    <input type="text" id="searchInput" placeholder="Search articles..." oninput="searchArticles()" />
+                </div>
+
 
         </header>
 
@@ -100,23 +100,20 @@
 
         
         
-        <script>
-function searchArticles() {
-    const input = document.getElementById("searchInput").value.toLowerCase();
-    const articles = document.querySelectorAll(".article-card");
-
-    articles.forEach(article => {
-        const title = article.querySelector("h3").textContent.toLowerCase();
-        const excerpt = article.querySelector(".article-excerpt").textContent.toLowerCase();
-
-        if (title.includes(input) || excerpt.includes(input)) {
-            article.style.display = "block";
-        } else {
-            article.style.display = "none";
+               <script>
+        function searchArticles() {
+            const input = document.getElementById("searchInput").value.toLowerCase();
+            const articles = document.querySelectorAll(".article-card");
+        
+            articles.forEach(article => {
+                const title = article.querySelector("h3").textContent.toLowerCase();
+                const excerpt = article.querySelector(".article-excerpt").textContent.toLowerCase();
+        
+                const match = title.includes(input) || excerpt.includes(input);
+                article.style.display = match ? "block" : "none";
+            });
         }
-    });
-}
-</script>
+        </script>
 
     </body>
 </html>
