@@ -21,6 +21,11 @@
             </div>
             <p class="page-description">Explore my latest legal insights and analysis on various topics.</p>
             <hr>
+                   <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Search articles..." />
+                        <button onclick="searchArticles()">Search</button>
+                     </div>
+
         </header>
 
 
@@ -84,12 +89,34 @@
                     </div>
                 </a>
             </div>
-
         </section>
 
+        
+        <hr>
         <footer>
             <p>© 2025 Mukul Yadav</p>
         </footer>
     </div>
-</body>
+
+        
+        
+        <script>
+function searchArticles() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const articles = document.querySelectorAll(".article-card");
+
+    articles.forEach(article => {
+        const title = article.querySelector("h3").textContent.toLowerCase();
+        const excerpt = article.querySelector(".article-excerpt").textContent.toLowerCase();
+
+        if (title.includes(input) || excerpt.includes(input)) {
+            article.style.display = "block";
+        } else {
+            article.style.display = "none";
+        }
+    });
+}
+</script>
+
+    </body>
 </html>
