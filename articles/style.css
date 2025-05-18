@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-    max-width: 85%; /* थोड़ा और चौड़ा for articles */
+    max-width: 75%; /* थोड़ा और चौड़ा for articles */
     margin: 2rem auto;
     background: var(--light-bg); /* Using light background for contrast */
     padding: 2rem;
@@ -25,7 +25,7 @@ header {
 
 header h1 {
     font-size: 2.5rem;
-    color: var(--primary);
+    color: #404258;
     margin-bottom: 0.5rem;
 }
 
