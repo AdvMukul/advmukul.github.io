@@ -1,8 +1,16 @@
-/* articles.css */
-
-/* Import the main styles to maintain consistency */
-@import url('../style.css');
-
+:root {
+  --primary: #aa1b35;
+  --secondary: #600c1a;
+  --accent: #e63946;
+  --bg: #f4f4f4;
+  --light-bg: #ffffff;
+  --text-main: #404258;
+  --text-muted: #555;
+  --text-light: #777;
+  --white: #ffffff;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --radius: 12px;
+}
 /* Specific styles for the articles page */
 body {
     background-color: var(--bg);
