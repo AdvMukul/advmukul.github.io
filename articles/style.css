@@ -201,6 +201,18 @@ header .page-description {
     color: var(--accent);
 }
 
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #999;
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-top: 1px solid #ddd;
+}
+
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .container {
