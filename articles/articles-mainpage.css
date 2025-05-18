@@ -1,0 +1,130 @@
+/* articles.css */
+
+/* Import the main styles to maintain consistency */
+@import url('../style.css');
+
+/* Specific styles for the articles page */
+body {
+    background-color: var(--bg);
+    color: var(--text-main);
+}
+
+.container {
+    max-width: 85%; /* थोड़ा और चौड़ा for articles */
+    margin: 2rem auto;
+    background: var(--light-bg); /* Using light background for contrast */
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+header .page-description {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.article-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.article-link {
+    display: block;
+    text-decoration: none;
+    color: inherit; /* Inherit text color from parent */
+    height: 100%; /* Make the entire card clickable */
+}
+
+.article-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+}
+
+.article-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 200px); /* Adjust height based on image height */
+}
+
+.article-date {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.article-content h3 {
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    color: var(--text-main);
+}
+
+.article-excerpt {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    flex-grow: 1; /* Push read more to the bottom */
+}
+
+.read-more {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+    color: var(--accent);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        max-width: 95%;
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .articles-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+
+    .article-card img {
+        height: 150px;
+    }
+}
