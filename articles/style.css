@@ -15,6 +15,7 @@
 body {
     background-color: var(--bg);
     color: var(--text-main);
+    font-family: 'Inter', sans-serif;
 }
 
 .container {
@@ -37,6 +38,15 @@ header h1 {
     margin-bottom: 0.5rem;
 }
 
+header h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+
 header .page-description {
     color: var(--text-muted);
     margin-bottom: 1rem;
@@ -44,7 +54,7 @@ header .page-description {
 
 .articles-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   grid-template-columns: 1fr !important;
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -53,6 +63,7 @@ header .page-description {
     background: var(--white);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
+  width: 100%;
     overflow: hidden;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
