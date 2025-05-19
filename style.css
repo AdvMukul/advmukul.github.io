@@ -143,8 +143,7 @@ hr {
   color: var(--primary);
 }
 /* Practice Areas & Testimonials Cards */
-.practice-card,
-.testimonial-card {
+.practice-card {
   background: var(--white);
   padding: 1.5rem;
   border-radius: var(--radius);
@@ -159,13 +158,11 @@ hr {
 }
 
 /* Testimonials */
-.testimonials-section,
 .practice-areas-section {
   background-color: #ffffff;
   padding: 4rem 1rem;
 }
 
-.testimonials-cards,
 .practice-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -238,8 +235,7 @@ hr {
 
 
 .blog-card-link,
-.blog-card,
-.more-tile {
+.blog-card {
   flex: 0 0 300px;
   background: white;
   border-radius: 10px;
@@ -276,31 +272,6 @@ hr {
   color: #999;
 }
 
-.more-tile {
-  flex: 0 0 300px;
-  scroll-snap-align: start;
-  background: #fafafa;
-  border: 2px dashed var(--primary);
-  color: var(--primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  border-radius: var(--radius);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
-  text-align: center;
-}
-.more-tile .card-content.centered {
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  height: 100%;
-  text-align: center;
-}
 
 /* Contact Form */
 .contact-form {
