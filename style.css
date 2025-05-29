@@ -235,7 +235,7 @@ hr {
   background-color: var(--light-bg);
   transform: translateY(-5px);
   color: var(--primary);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .read-more-btn {
@@ -251,7 +251,7 @@ hr {
 
 .read-more-btn:hover {
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .blog-card-link,
