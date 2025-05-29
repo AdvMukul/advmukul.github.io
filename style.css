@@ -235,7 +235,7 @@ hr {
  background-color: var(--light-bg);
  transform: translateY(-5px);
  color: var(--primary);
- text-decoration: none;
+ text-decoration: underline;
  border-color: var(--accent);
 }
 
@@ -253,21 +253,10 @@ hr {
 
 .read-more-btn:hover {
  color: inherit;
- text-decoration: none;
+ text-decoration: underline;
 }
 
-/* Enhanced hover effect for read more tile text */
-.read-more-tile:hover .read-more-btn {
- text-decoration: underline;
- text-decoration-thickness: 2px;
- text-underline-offset: 4px;
- background: linear-gradient(120deg, var(--accent) 0%, var(--accent) 100%);
- background-repeat: no-repeat;
- background-size: 100% 0.2em;
- background-position: 0 88%;
- color: var(--primary);
- font-weight: 700;
-}
+
 .blog-card-link,
 .blog-card {
   flex: 0 0 300px;
