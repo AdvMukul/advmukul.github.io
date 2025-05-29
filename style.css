@@ -23,7 +23,7 @@
 }
 
 .nav-container img {
-  width: 30px;
+  width: 60px;
   height: auto;
   object-fit: cover;
   border-radius: var(--radius);
