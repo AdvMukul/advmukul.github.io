@@ -1,133 +1,208 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8" />
-    <meta name="description" content="News and insights by Adv. Mukul Yadav">
-    <meta name="keywords" content="portfolio, Adv. Mukul, Advocate Mukul, Legal professional India, Lawyer portfolio website, Legal tech advocate, Indian lawyer personal site, Mukul Yadav advocate, Legal advisor online, Legal blog India">
-    <title>News and Insights | Adv. Mukul Yadav</title>
-    <link rel="stylesheet" href="style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Latest legal articles, insights, and analysis by Adv. Mukul Yadav covering criminal law, civil disputes, intellectual property, and more.">
+    <meta name="keywords" content="legal articles, law insights, legal analysis, Indian law, criminal law articles, civil law, intellectual property law, legal blog">
+    <title>News & Insights | Mukul Yadav | Advocate</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="/images/favicon1.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />    
+    <link rel="icon" href="images/favicon1.png" type="image/x-icon">
 </head>
-    <body>
-<!-- Navigation -->
+
+<body>
+    <!-- Navigation -->
     <nav class="nav-bar">
         <div class="nav-container">
-            <a href="/" class="nav-brand">Mukul Yadav</a>
+            <div class="logo-brand-wrapper">
+                <img src="../images/logo.png" alt="Logo" class="site-logo">
+                <a href="../" class="nav-brand">Adv. Mukul Yadav</a>
+            </div>  
             <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/articles">Articles</a></li>
-                <li><a href="/#contact">Contact</a></li>
+                <li><a href="../">Home</a></li>
+                <li><a href="/articles" style="color: var(--primary);">News & Insights</a></li>
+                <li><a href="../#contact">Contact Me</a></li>
             </ul>
         </div>
     </nav>
 
+    <!-- Hero Section -->
+    <section class="articles-hero">
+        <h1>News & Insights</h1>
+        <p>Stay updated with the latest legal developments, case analyses, and professional insights from the world of law and jurisprudence.</p>
+    </section>
 
-        
     <div class="container">
-               <header>
-            <div class="header-flex">
-                <img src="/images/logo.png" alt="Logo" class="site-logo">
-                <div class="header-text">
-                    <h1>News and Insights</h1>
-                    <h2>by Adv. Mukul Yadav</h2>
-                </div>
-            </div>
-            <p class="page-description">Explore my latest legal insights and analysis on various topics.</p>
-            <hr>
-                   <div class="search-container">
-                    <input type="text" id="searchInput" placeholder="Search articles..." oninput="searchArticles()" />
-                </div>
-
-
-        </header>
-
-
-        <section class="articles-grid">
-            <div class="article-card">
-                <a href="/articles/cognizance/" class="article-link">
-                    <img src="../image1.jpg" alt="Cognizance-Insight">
-                    <div class="article-content">
-                        <span class="article-date">New Release</span>
-                        <h3>The Concept of Cognizance under the Bharatiya Nagarik Suraksha Sanhita: A Comparative and Analytical Study</h3>
-                        <p class="article-excerpt">The concept of cognizance occupies a foundational position in the criminal justice system of India, serving as the critical judicial threshold for the commencement of criminal proceedings. With the introduction of the Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023, as a successor to the Code of Criminal Procedure (CrPC), 1973, the legal landscape concerning the process and philosophy of taking cognizance has undergone nuanced changes. </p>
-                        <span class="read-more">Read Full Article →</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="article-card">
-                <a href="/articles/contractual-disputes-infrastructure/" class="article-link">
-                    <img src="../image2.jpg" alt="Contractual Disputes in Infrastructure Sector">
-                    <div class="article-content">
-                        <span class="article-date">26 Feb 2025</span>
-                        <h3>Contractual Disputes in Infrastructure Sector</h3>
-                        <p class="article-excerpt">An analysis of common contractual disputes arising in the infrastructure sector and potential solutions.</p>
-                        <span class="read-more">Read More →</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="article-card">
-                <a href="/articles/liquidation-bhushan-power/" class="article-link">
-                    <img src="../image3.jpg" alt="Liquidation of Bhushan Power – A Cautionary Tale">
-                    <div class="article-content">
-                        <span class="article-date">09 May 2025</span>
-                        <h3>Liquidation of Bhushan Power – A Cautionary Tale</h3>
-                        <p class="article-excerpt">Examining the complexities and lessons learned from the liquidation of Bhushan Power.</p>
-                        <span class="read-more">Read More →</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="article-card">
-                <a href="/articles/court-limits-arbitral-awards/" class="article-link">
-                    <img src="../image4.jpg" alt="Court Limits on Modifying Arbitral Awards">
-                    <div class="article-content">
-                        <span class="article-date">08 May 2025</span>
-                        <h3>Court Limits on Modifying Arbitral Awards</h3>
-                        <p class="article-excerpt">Discussing recent court decisions that highlight the limitations on modifying arbitral awards.</p>
-                        <span class="read-more">Read More →</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="article-card">
-                <a href="/articles/legal-developments-arbitration/" class="article-link">
-                    <img src="../image5.jpg" alt="Recent Legal Developments in Arbitration">
-                    <div class="article-content">
-                        <span class="article-date">01 May 2025</span>
-                        <h3>Recent Legal Developments in Arbitration</h3>
-                        <p class="article-excerpt">An overview of the latest legal developments and trends in the field of arbitration.</p>
-                        <span class="read-more">Read More →</span>
-                    </div>
-                </a>
+        <!-- Search and Filter Section -->
+        <section class="search-filter-section">
+            <div class="search-filter-controls">
+                <input type="text" class="search-box" placeholder="Search articles..." id="searchBox">
+                <select class="filter-select" id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="criminal-law">Criminal Law</option>
+                    <option value="civil-disputes">Civil Disputes</option>
+                    <option value="intellectual-property">Intellectual Property</option>
+                    <option value="arbitration">Arbitration</option>
+                    <option value="corporate-law">Corporate Law</option>
+                    <option value="property-law">Property Law</option>
+                </select>
             </div>
         </section>
 
-        
-        <hr>
-        <footer>
-            <p>© 2025 Mukul Yadav</p>
-        </footer>
+        <!-- Articles Grid -->
+        <section class="articles-grid" id="articlesGrid">
+            <!-- Featured Article -->
+            <article class="article-card featured-article" onclick="window.location.href='cognizance/'">
+                <div class="featured-content">
+                    <div class="featured-badge">Featured Article</div>
+                    <div class="article-meta">
+                        <span class="article-date">New Release</span>
+                        <span class="article-category">Criminal Law</span>
+                    </div>
+                    <h3>The Concept of Cognizance under the Bharatiya Nagarik Suraksha Sanhita: A Comparative and Analytical Study</h3>
+                    <p class="article-excerpt">A comprehensive analysis of the concept of cognizance under the new Bharatiya Nagarik Suraksha Sanhita, examining the changes from the previous Criminal Procedure Code and their implications for legal practice.</p>
+                    <a href="cognizance/" class="read-more-link">Read Full Article</a>
+                </div>
+            </article>
+
+            <!-- Regular Articles -->
+            <article class="article-card" onclick="window.location.href='arbitration-developments/'">
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-date">01 May 2025</span>
+                        <span class="article-category">Arbitration</span>
+                    </div>
+                    <h3>Recent Legal Developments in Arbitration</h3>
+                    <p class="article-excerpt">Exploring the latest judicial pronouncements and legislative changes in arbitration law, focusing on enforcement mechanisms and procedural reforms that impact dispute resolution.</p>
+                    <a href="arbitration-developments/" class="read-more-link">Read More</a>
+                </div>
+            </article>
+
+            <article class="article-card" onclick="window.location.href='court-limits-arbitral-awards/'">
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-date">08 May 2025</span>
+                        <span class="article-category">Arbitration</span>
+                    </div>
+                    <h3>Court Limits on Modifying Arbitral Awards</h3>
+                    <p class="article-excerpt">An in-depth examination of judicial intervention in arbitral awards, discussing the boundaries of court interference and the principles governing modification of arbitration decisions.</p>
+                    <a href="court-limits-arbitral-awards/" class="read-more-link">Read More</a>
+                </div>
+            </article>
+
+            <article class="article-card" onclick="window.location.href='bhushan-power-liquidation/'">
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-date">09 May 2025</span>
+                        <span class="article-category">Corporate Law</span>
+                    </div>
+                    <h3>Liquidation of Bhushan Power – A Cautionary Tale</h3>
+                    <p class="article-excerpt">Analyzing the corporate insolvency proceedings of Bhushan Power and Steel Limited, highlighting key lessons for stakeholders in similar restructuring scenarios.</p>
+                    <a href="bhushan-power-liquidation/" class="read-more-link">Read More</a>
+                </div>
+            </article>
+
+            <article class="article-card" onclick="window.location.href='infrastructure-disputes/'">
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-date">26 Feb 2025</span>
+                        <span class="article-category">Civil Disputes</span>
+                    </div>
+                    <h3>Contractual Disputes in Infrastructure Sector</h3>
+                    <p class="article-excerpt">Understanding the complexities of contractual disputes in infrastructure projects, examining common issues and legal remedies available to parties.</p>
+                    <a href="infrastructure-disputes/" class="read-more-link">Read More</a>
+                </div>
+            </article>
+
+            <article class="article-card" onclick="window.location.href='property-rights-trends/'">
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-date">15 Apr 2025</span>
+                        <span class="article-category">Property Law</span>
+                    </div>
+                    <h3>Emerging Trends in Property Rights Litigation</h3>
+                    <p class="article-excerpt">Examining recent developments in property law, including digital property rights, environmental considerations, and changing judicial attitudes toward property disputes.</p>
+                    <a href="property-rights-trends/" class="read-more-link">Read More</a>
+                </div>
+            </article>
+
+            <article class="article-card" onclick="window.location.href='digital-ip-protection/'">
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-date">22 Mar 2025</span>
+                        <span class="article-category">Intellectual Property</span>
+                    </div>
+                    <h3>Digital Age Challenges in IP Protection</h3>
+                    <p class="article-excerpt">Addressing the evolving landscape of intellectual property protection in the digital era, covering cybersecurity, AI-generated content, and online infringement issues.</p>
+                    <a href="digital-ip-protection/" class="read-more-link">Read More</a>
+                </div>
+            </article>
+
+            <article class="article-card" onclick="window.location.href='criminal-justice-reforms/'">
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-date">10 Mar 2025</span>
+                        <span class="article-category">Criminal Law</span>
+                    </div>
+                    <h3>Criminal Justice Reforms: Impact and Implementation</h3>
+                    <p class="article-excerpt">Analyzing the implementation of recent criminal justice reforms, their impact on legal practice, and the challenges faced by legal practitioners and the judiciary.</p>
+                    <a href="criminal-justice-reforms/" class="read-more-link">Read More</a>
+                </div>
+            </article>
+
+            <article class="article-card" onclick="window.location.href='corporate-governance-pandemic/'">
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-date">28 Feb 2025</span>
+                        <span class="article-category">Corporate Law</span>
+                    </div>
+                    <h3>Corporate Governance in Post-Pandemic Era</h3>
+                    <p class="article-excerpt">Exploring how corporate governance practices have evolved in response to post-pandemic challenges, including remote working, digital transformation, and regulatory compliance.</p>
+                    <a href="corporate-governance-pandemic/" class="read-more-link">Read More</a>
+                </div>
+            </article>
+        </section>
     </div>
 
-        
-        
-               <script>
-        function searchArticles() {
-            const input = document.getElementById("searchInput").value.toLowerCase();
-            const articles = document.querySelectorAll(".article-card");
-        
+    <footer>
+        <p>© 2025 Mukul Yadav. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Search and Filter Functionality
+        const searchBox = document.getElementById('searchBox');
+        const categoryFilter = document.getElementById('categoryFilter');
+        const articles = Array.from(document.querySelectorAll('.article-card'));
+
+        function filterArticles() {
+            const searchTerm = searchBox.value.toLowerCase();
+            const selectedCategory = categoryFilter.value;
+
             articles.forEach(article => {
-                const title = article.querySelector("h3").textContent.toLowerCase();
-                const excerpt = article.querySelector(".article-excerpt").textContent.toLowerCase();
-        
-                const match = title.includes(input) || excerpt.includes(input);
-                article.style.display = match ? "block" : "none";
+                const title = article.querySelector('h3').textContent.toLowerCase();
+                const excerpt = article.querySelector('.article-excerpt').textContent.toLowerCase();
+                const category = article.querySelector('.article-category').textContent.toLowerCase().replace(/\s+/g, '-');
+                
+                const matchesSearch = title.includes(searchTerm) || excerpt.includes(searchTerm);
+                const matchesCategory = selectedCategory === 'all' || category === selectedCategory;
+                
+                article.style.display = (matchesSearch && matchesCategory) ? 'block' : 'none';
             });
         }
-        </script>
 
-    </body>
+        // Event listeners
+        searchBox.addEventListener('input', filterArticles);
+        categoryFilter.addEventListener('change', filterArticles);
+
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
 </html>
