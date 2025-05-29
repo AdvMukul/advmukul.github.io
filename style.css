@@ -22,6 +22,16 @@
   z-index: 100;
 }
 
+.logo-brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Adjust spacing as needed */
+}
+
+.site-logo {
+  margin-right: 0; /* Ensure no margin on image */
+}
+
 .nav-container img {
   width: 60px;
   height: auto;
