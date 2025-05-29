@@ -25,56 +25,68 @@
         }
 
         /* Navigation */
-        .nav-bar {
-          background: var(--white);
-          padding: 1rem 0;
-          box-shadow: var(--shadow);
-          position: sticky;
-          top: 0;
-          z-index: 100;
-        }
+.nav-bar {
+  background: var(--white);
+  padding: 1rem 0;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 
-        .nav-container {
-          padding: 0 2rem;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
+.logo-brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Adjust spacing as needed */
+}
 
-        .logo-brand-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
+.site-logo {
+  margin-right: 0; /* Ensure no margin on image */
+}
 
-        .site-logo {
-            height: 40px;
-        }
+.nav-container img {
+  width: 60px;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius);
+  transition: transform 0.3s ease-in-out;
+}
 
-        .nav-brand {
-          font-size: 1.5rem;
-          font-weight: 700;
-          color: var(--primary);
-          text-decoration: none;
-        }
+.nav-container img:hover {
+  transform: scale(1.05);
+}
 
-        .nav-links {
-          display: flex;
-          gap: 2rem;
-          list-style: none;
-        }
+.nav-container {
+  max-width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-        .nav-links a {
-          color: var(--text-main);
-          text-decoration: none;
-          font-weight: 500;
-          transition: color 0.3s ease;
-        }
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+}
 
-        .nav-links a:hover,
-        .nav-links a[style*="color"] {
-          color: var(--primary);
-        }
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
 
         /* Hero Section */
         .articles-hero {
