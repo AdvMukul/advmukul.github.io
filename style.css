@@ -227,6 +227,7 @@ hr {
 /* Practice Areas */
 .practice-areas-section {
   background-color: #ffffff;
+  padding: 1rem 1rem;
 }
 
 .practice-grid {
