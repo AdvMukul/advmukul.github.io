@@ -104,6 +104,20 @@ body {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
+
+/* Page Heading */
+.page-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-heading h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0;
+}
+
 h1, h2, h3 {
   font-family: 'Inter', sans-serif;
   line-height: 1.2;
