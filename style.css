@@ -112,10 +112,14 @@ body {
 }
 
 .page-heading h1 {
+  text-align-last: justify;
   font-size: 3rem;
   font-weight: 700;
   color: var(--text-main);
-  margin: 0;
+  margin-top: 0rem;
+  margin-right: 4rem;
+  margin-bottom: 2rem;
+  margin-left: 4rem;
 }
 
 h1, h2, h3 {
