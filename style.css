@@ -445,7 +445,7 @@ footer {
 
 
 /* Mobile Screens - Max Width 600px */
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   
   /* Navigation Mobile */
   .nav-container {
