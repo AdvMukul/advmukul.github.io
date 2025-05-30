@@ -300,41 +300,7 @@ footer {
 
 
 /* Responsive mobile adjustments */
-@media screen and (max-width: 768px) {
-
-  /* Remove forced desktop layout */
-  body {
-    min-width: unset;
-    overflow-x: hidden;
-  }
-
-  /* NAVIGATION */
-  .nav-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 1rem;
-    box-sizing: border-box;
-  }
-
-  .nav-brand {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  .nav-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-  }
-
-  .nav-links a {
-    font-size: 1rem;
-  }
+@media (max-width: 768px) {
 
   /* ARTICLE CONTAINER */
   .article-container {
