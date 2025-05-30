@@ -268,7 +268,7 @@
   /* ===== RESPONSIVE MEDIA QUERIES ===== */
 
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
     /* Navigation */
     .nav-container {
         max-width: 95%;
