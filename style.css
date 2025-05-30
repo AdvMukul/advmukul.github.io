@@ -250,7 +250,7 @@ hr {
 
 .practice-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: auto;
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -575,6 +575,14 @@ footer {
     max-width: 100%;
     margin: 0 auto;
   }
+
+.practice-grid h3 {
+  font-size: 1rem;
+}
+
+  .practice-grid p {
+  font-size: 0.5rem;
+}
   
   .practice-card {
     padding: 1rem; /* Slightly more padding */
