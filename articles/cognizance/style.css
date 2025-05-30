@@ -298,3 +298,93 @@ footer {
   border-top: 1px solid #ddd;
 }
 
+
+/*responsive mobile adjusments*/
+@media screen and (max-width: 768px) {
+  
+  /* Force horizontal scrolling to maintain desktop layout */
+  body {
+    min-width: 1200px; /* Minimum width to preserve desktop layout */
+    overflow-x: auto;
+  }
+  
+  /* Navigation adjustments */
+  .nav-container {
+    max-width: 90%;
+    min-width: 1000px;
+    padding: 0 2rem;
+  }
+  
+  .nav-brand {
+    font-size: 1.3rem;
+  }
+  
+  .nav-links {
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+  
+  /* Article container adjustments */
+  .article-container {
+    max-width: 85%;
+    min-width: 1000px;
+    margin: 1.5rem auto;
+    padding: 2.5rem;
+  }
+  
+  /* Article header adjustments */
+  .article-title {
+    font-size: 2.5rem;
+  }
+  
+  .article-meta {
+    gap: 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Article content adjustments */
+  .article-content {
+    font-size: 1rem;
+  }
+  
+  .article-content h2 {
+    font-size: 1.8rem;
+    margin: 2rem 0 1.2rem 0;
+  }
+  
+  .article-content h3 {
+    font-size: 1.4rem;
+    margin: 1.8rem 0 0.8rem 0;
+  }
+  
+  .article-content h4 {
+    font-size: 1.2rem;
+  }
+  
+  /* Author bio adjustments */
+  .author-bio {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  
+  .author-avatar {
+    height: 120px;
+  }
+  
+  /* CTA section adjustments */
+  .cta-section {
+    padding: 2.5rem;
+  }
+  
+  .cta-section h3 {
+    font-size: 1.8rem;
+  }
+  
+  .cta-button {
+    padding: 0.9rem 1.8rem;
+    font-size: 1rem;
+  }
+}
