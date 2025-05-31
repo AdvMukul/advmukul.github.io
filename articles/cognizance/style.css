@@ -106,7 +106,7 @@ body {
 
 /* Article Container */
 .article-container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 6rem 2rem 2rem;
   background: var(--white);
@@ -334,11 +334,13 @@ blockquote::before {
 
 /* Footer */
 footer {
-  background: var(--text-main);
-  color: var(--white);
   text-align: center;
-  padding: 2rem 0;
+  font-size: 0.75rem;
+  color: #999;
   margin-top: 3rem;
+  padding-top: 1.5rem 0;
+  padding-bottom: 1.5rem 0;
+  border-top: 1px solid #ddd;
 }
 
 /* Responsive Design */
