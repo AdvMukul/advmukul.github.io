@@ -1,15 +1,29 @@
+/* CSS Variables */
 :root {
-  --primary: #aa1b35;
-  --secondary: #600c1a;
-  --accent: #e63946;
-  --bg: #f4f4f4;
-  --light-bg: #ffffff;
-  --text-main: #404258;
-  --text-muted: #555;
-  --text-light: #777;
+  --background: #f4f4f4;
+  --links: #aa1b35;
+  --primary: #c8576c;
+  --text-main: #494b57;
   --white: #ffffff;
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --radius: 12px;
+  --light-gray: #e8e8e8;
+  --dark-gray: #333333;
+  --border-color: #ddd;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--text-main);
+  background-color: var(--background);
 }
 
 /* Navigation */
@@ -17,745 +31,530 @@
   background: var(--white);
   padding: 1rem 0;
   box-shadow: var(--shadow);
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
-}
-
-.logo-brand-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem; /* Adjust spacing as needed */
-}
-
-.site-logo {
-  margin-right: 0; /* Ensure no margin on image */
-}
-
-.nav-container img {
-  width: 60px;
-  height: auto;
-  object-fit: cover;
-  border-radius: var(--radius);
-  transition: transform 0.3s ease-in-out;
-}
-
-.nav-container img:hover {
-  transform: scale(1.05);
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .nav-container {
-  max-width: 75%;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.logo-brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-logo {
+  height: 40px;
+  width: auto;
+}
+
 .nav-brand {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary);
+  color: var(--text-main);
   text-decoration: none;
+  transition: var(--transition);
+}
+
+.nav-brand:hover {
+  color: var(--primary);
 }
 
 .nav-links {
   display: flex;
-  gap: 2rem;
   list-style: none;
+  gap: 2rem;
 }
 
 .nav-links a {
   color: var(--text-main);
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: var(--transition);
+  position: relative;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a[style*="color"] {
   color: var(--primary);
 }
 
-
-
-/* Reset */
-body {
-  overflow-x: hidden;
-  font-family: 'Inter', sans-serif;
-  background-color: var(--bg);
-  color: var(--text-main);
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: var(--transition);
 }
 
-/* Generic containers */
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Container */
 .container {
-  max-width: 75%;
-  margin: 2rem auto;
-  background: var(--white);
-  padding: 2rem;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  transition: box-shadow 0.3s ease-in-out;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem 2rem;
 }
-
-.container:hover {
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
-
 
 /* Page Heading */
 .page-heading {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .page-heading h1 {
-  text-align-last: justify;
   font-size: 3rem;
   font-weight: 700;
   color: var(--text-main);
-  margin-top: 0rem;
-  margin-right: 5rem;
-  margin-bottom: 2rem;
-  margin-left: 5rem;
-}
-
-h1, h2, h3 {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.2;
-  margin-top: 0;
+  letter-spacing: 0.2em;
   margin-bottom: 1rem;
-  color: var(--text-main);
 }
 
-h1 {
-  font-size: 2.75rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-a {
-  color: var(--primary);
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-a:hover {
-  color: var(--accent);
-  text-decoration: underline;
-}
-
-hr {
+.page-heading hr {
+  width: 100px;
+  height: 3px;
+  background: var(--primary);
   border: none;
-  border-top: 2px solid #ddd;
-  margin: 2rem 0;
+  margin: 0 auto;
 }
 
 /* Profile Section */
-.info {
-    text-align: left; /* Align all text to the left */
-}
-
 .profile {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    margin-bottom: 2rem;
-    justify-content: flex-start;
-    flex-direction: row;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 3rem;
 }
 
 .profile img {
-  width: 300px;
-  height: auto;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
   object-fit: cover;
-  border-radius: var(--radius);
-  transition: transform 0.3s ease-in-out;
-}
-
-.profile img:hover {
-  transform: scale(1.05);
+  box-shadow: var(--shadow);
 }
 
 .info h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin: 0; /* Remove default margin */
-}
-
-/* Remove space between Advocate and Delhi High Court */
-.profession{
-  font-size: 2rem;
-  display: inline; /* Inline removes the line break and space */
-  margin: 0;
-}
-.practice-place{
-  font-size: 1.5rem;
-  display: inline; /* Inline removes the line break and space */
-  margin: 0;
-}
-
-.description{
-  margin-top: 10px;
-}
-
-/* Optional: use <br> for line break without space */
-.info p {
-  margin: 10px  ; /* Prevent extra spacing */
-}
-
-/* Align links, keep email and links grouped */
-.links {
-  text-align: right;
-  margin-top: 6rem;
-}
-
-/* Section Titles */
-.section-title {
-  text-align: center;
   font-size: 2.5rem;
-  letter-spacing: 2px;
+  color: var(--text-main);
   margin-bottom: 1rem;
+}
+
+.profession {
   color: var(--primary);
+  font-size: 1.2rem;
 }
 
-/* Practice Areas & Testimonials Cards */
-.practice-card {
-  background: var(--white);
-  padding: 1.5rem;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  transition: transform 0.3s ease;
+.practice-place {
+  color: var(--text-main);
+  font-style: italic;
 }
 
-.practice-card:hover,
-.testimonial-card:hover,
-.blog-card:hover {
-  transform: translateY(-5px);
+.description {
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
-/* Practice Areas */
-.practice-areas-section {
-  background-color: #ffffff;
-  padding: 1rem 1rem;
+.links a {
+  color: var(--links);
+  text-decoration: none;
+  margin-right: 1rem;
+  transition: var(--transition);
+}
+
+.links a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* Dividers */
+hr {
+  border: none;
+  height: 1px;
+  background: var(--border-color);
+  margin: 3rem 0;
+}
+
+/* Practice Areas Section */
+.practice-areas-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+.divider {
+  width: 80px;
+  height: 3px;
+  background: var(--primary);
+  margin: 0 auto 3rem;
 }
 
 .practice-grid {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
-/* Blog Section */
-.blog-slider {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  -webkit-overflow-scrolling: touch;
-}
-
-
-.blog-card-link,
-.blog-card {
-  flex: 0 0 300px;
-  background: white;
+.practice-card {
+  background: var(--white);
+  padding: 2rem;
   border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  height: 100%; /* Ensures uniform height */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  text-align: center;
 }
 
-.blog-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
+.practice-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.practice-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.practice-card h3 {
+  color: var(--primary);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.practice-card p {
+  line-height: 1.6;
+  color: var(--text-main);
+}
+
+/* Blog Slider Section with Carousel */
+.blog-slider-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--text-main);
+  margin-bottom: 3rem;
+}
+
+.blog-slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.blog-slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.blog-card-link {
+  text-decoration: none;
+  color: inherit;
+  min-width: 100%;
+  display: block;
+}
+
+.blog-card {
+  background: var(--white);
+  margin: 0 1rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  height: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 .card-content {
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  flex-grow: 1;
-}
-
-.blog-card h3 {
-  font-size: 1.1rem;
-  margin-top: 10px;
-  margin-bottom: 0;
+  padding: 2rem;
 }
 
 .date-read-time {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
-.date {
+.date, .read-time {
   font-size: 0.9rem;
-  color: #999;
-  margin: 0;
-}
-
-.read-time {
-  font-size: 0.9rem;
-  color: #999;
-  margin: 0;
-}
-
-
-/* Testimonials Section Carousel */
-.testimonials-carousel {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 10px;
-  -webkit-overflow-scrolling: touch;
-  padding: 2rem 1rem;
-  max-width: 100%;
-}
-
-.testimonial-card {
-  flex: 0 0 300px;
-  scroll-snap-align: start;
-  background: var(--white);
-  padding: 1.5rem;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-}
-
-/* Unified Read More Tile Styles */
-.read-more-tile {
-  flex: 0 0 300px;
-  scroll-snap-align: start;
-  background: #fafafa;
-  border: 2px dashed var(--primary);
   color: var(--primary);
+  font-weight: 500;
+}
+
+.blog-card h3 {
+  color: var(--text-main);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.overview {
+  color: var(--text-main);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.read-more-tile {
+  background: var(--primary);
+  color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  border-radius: var(--radius);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
-  text-align: center;
   text-decoration: none;
+  border-radius: 10px;
+  margin: 0 1rem;
+  min-width: 100%;
+  height: 300px;
+  transition: var(--transition);
 }
 
 .read-more-tile:hover {
-  background-color: var(--light-bg);
+  background: var(--links);
   transform: translateY(-5px);
-  color: var(--primary);
-  text-decoration: underline;
 }
 
 .read-more-btn {
-  color: inherit;
-  text-decoration: none;
-  display: block;
-  width: 100%;
-  height: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Carousel Controls */
+.carousel-controls {
   display: flex;
-  align-items: center;
   justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
-.read-more-btn:hover {
-  color: inherit;
-  text-decoration: underline;
+.carousel-btn {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: var(--transition);
 }
 
+.carousel-btn:hover {
+  background: var(--links);
+  transform: scale(1.1);
+}
 
-/* Contact Form */
+.carousel-btn:disabled {
+  background: var(--light-gray);
+  color: var(--text-main);
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Testimonials Section with Carousel */
+.testimonials-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--text-main);
+  margin-bottom: 3rem;
+}
+
+.testimonials-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.testimonials-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.testimonial-card {
+  background: var(--white);
+  padding: 2rem;
+  margin: 0 1rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  min-width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: '"';
+  font-size: 4rem;
+  color: var(--primary);
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-family: Georgia, serif;
+}
+
+.testimonial-card p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  color: var(--text-main);
+}
+
+.testimonial-card strong {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Contact Section */
+#contact {
+  background: var(--white);
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--text-main);
+  margin-bottom: 2rem;
+}
+
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
-  padding: 2rem;
-  background-color: var(--white);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: var(--radius);
+  padding: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
 }
 
 .contact-form button {
-  width: 100%;
-  padding: 0.75rem;
-  background-color: var(--primary);
+  background: var(--primary);
   color: var(--white);
+  padding: 1rem 2rem;
   border: none;
-  border-radius: var(--radius);
-  font-size: 1rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
   cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
 }
 
 .contact-form button:hover {
-  background-color: var(--secondary);
+  background: var(--links);
+  transform: translateY(-2px);
 }
 
 /* Footer */
 footer {
+  background: var(--text-main);
+  color: var(--white);
   text-align: center;
-  font-size: 0.75rem;
-  color: #999;
+  padding: 2rem 0;
   margin-top: 3rem;
-  padding-top: 1.5rem 0;
-  padding-bottom: 1.5rem 0;
-  border-top: 1px solid #ddd;
 }
 
-/* ===============================
-   MEDIA QUERIES - RESPONSIVE DESIGN
-   =============================== */
-
-
-/* Mobile Screens - Max Width 600px */
-@media screen and (max-width: 600px) {
-  
-  /* Navigation Mobile */
+/* Responsive Design */
+@media (max-width: 768px) {
   .nav-container {
-    max-width: 95%;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 0.5rem;
-  }
-  
-  .logo-brand-wrapper {
-    justify-content: center;
-  }
-  
-  .nav-container img {
-    width: 40px;
-  }
-  
-  .nav-brand {
-    font-size: 1.2rem;
+    padding: 0 1rem;
   }
   
   .nav-links {
     gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
   }
   
-  .nav-links li {
-    margin: 0.25rem;
-  }
-  
-  .nav-links a {
-    font-size: 0.9rem;
-    padding: 0.5rem;
-  }
-  
-  /* Container Mobile */
   .container {
-    max-width: 95%;
-    margin: 1rem auto;
-    padding: 1rem;
+    padding: 6rem 1rem 2rem;
   }
   
-  /* Page Heading Mobile */
-  .page-heading h1 {
-    font-size: 1.8rem;
-    margin-right: 0;
-    margin-left: 0;
-    text-align-last: auto;
-    text-align: center;
-  }
-  
-  /* Typography Mobile */
-  h1 {
-    font-size: 2rem;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-  
-  h3 {
-    font-size: 1.2rem;
-  }
-  
-  /* Profile Section Mobile */
   .profile {
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
     text-align: center;
   }
   
   .profile img {
     width: 200px;
-    height: auto;
+    height: 200px;
   }
   
-  .info {
-    text-align: center;
-    width: 100%;
-  }
-  
-  .info h1 {
-    font-size: 2.2rem;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  .profession {
-    font-size: 1.5rem;
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  
-  .practice-place {
-    font-size: 1.2rem;
-    display: block;
-  }
-  
-  .description {
-    margin-top: 1rem;
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-  
-  .links {
-    text-align: center;
-    margin-top: 2rem;
-  }
-  
-  .links a {
-    display: block;
-    margin: 0.5rem 0;
-    font-size: 0.9rem;
-  }
-  
-  /* Practice Areas Mobile */
-  .practice-areas-section {
-    padding: 1rem 0.5rem;
+  .page-heading h1 {
+    font-size: 2rem;
   }
   
   .practice-grid {
-    grid-template-columns: 1fr; /* Single column layout */
-    gap: 1.5rem; /* Increased gap for better spacing */
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-.practice-grid h3 {
-  font-size: 1rem;
-}
-
-  .practice-grid p {
-  font-size: 0.5rem;
-}
-  
-  .practice-card {
-    padding: 1rem; /* Slightly more padding */
-    width: 100%; /* Ensure full width */
-    box-sizing: border-box; /* Include padding in width calculation */
-    min-height: auto; /* Allow natural height */
+    grid-template-columns: 1fr;
   }
   
-  .practice-card .icon {
-    font-size: 2.5rem; /* Larger icon for mobile */
-    margin-bottom: 1rem;
-    display: block;
-    text-align: center;
-  }
-  
- .practice-card h3 {
-    font-size: 1.25rem; /* Larger heading */
-    margin-bottom: 1rem;
-    line-height: 1.3;
-    text-align: center; /* Center align heading */
-    font-weight: 600;
-  }
-  
-  .practice-card p {
-    font-size: 1rem; /* Increased font size for better readability */
-    line-height: 1.6; /* Better line spacing */
-    text-align: left; /* Left align paragraph text */
-    margin: 0; /* Remove default margin */
-  }
-  
-  /* Additional spacing adjustments */
-  .practice-areas-section h2 {
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  
-  /* Blog Section Mobile */
-  .blog-slider-section {
-    padding: 1rem 0.5rem;
-  }
-  
-  .blog-slider {
-    gap: 15px;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-  
-  .blog-card-link,
-  .blog-card {
-    flex: 0 0 280px;
-    min-height: 250px;
-  }
-  
-  .card-content {
-    padding: 12px;
-  }
-  
-  .blog-card h3 {
-    font-size: 1rem;
-    line-height: 1.3;
-  }
-  
-  .date-read-time {
-    margin-bottom: 8px;
-  }
-  
-  .date,
-  .read-time {
-    font-size: 0.8rem;
-  }
-  
-  .overview {
-    font-size: 0.85rem;
-    line-height: 1.4;
-  }
-  
-  /* Testimonials Mobile */
-  .testimonials-section {
-    padding: 1rem 0.5rem;
-  }
-  
-  .testimonials-carousel {
-    padding: 1rem 0.5rem;
-    gap: 15px;
-  }
-  
+  .practice-card,
+  .blog-card,
   .testimonial-card {
-    flex: 0 0 280px;
-    padding: 1rem;
-  }
-  
-  .testimonial-card p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-  }
-  
-  .testimonial-card strong {
-    font-size: 0.85rem;
-  }
-  
-  /* Read More Tiles Mobile */
-  .read-more-tile {
-    flex: 0 0 280px;
-    min-height: 120px;
-  }
-  
-  .read-more-btn {
-    font-size: 0.9rem;
-    line-height: 1.3;
-  }
-  
-  /* Contact Form Mobile */
-  .contact-form {
-    padding: 1rem;
     margin: 0 0.5rem;
   }
   
-  .contact-form label {
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    display: block;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    padding: 0.6rem;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-  }
-  
-  .contact-form textarea {
-    min-height: 120px;
-    resize: vertical;
-  }
-  
-  .contact-form button {
-    padding: 1rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 8px;
-    margin-top: 0.5rem;
-  }
-  
-  /* Footer Mobile */
-  footer {
-    padding: 1rem 0.5rem;
-    font-size: 0.7rem;
-    line-height: 1.4;
-  }
-  
-  /* Horizontal Rules Mobile */
-  hr {
-    margin: 1.5rem 0;
-    border-top: 1px solid #ddd;
-  }
-  
-  /* Section Spacing Mobile */
-  .practice-areas-section,
-  .blog-slider-section,
-  .testimonials-section,
   #contact {
-    margin-bottom: 2rem;
-  }
-  
-  /* Hover Effects Disabled on Mobile */
-  .practice-card:hover,
-  .testimonial-card:hover,
-  .blog-card:hover,
-  .read-more-tile:hover {
-    transform: none;
+    padding: 2rem 1rem;
   }
 }
 
+@media (max-width: 480px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .info h1 {
+    font-size: 2rem;
+  }
+  
+  .page-heading h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+  }
+}
