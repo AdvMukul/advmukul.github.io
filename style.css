@@ -142,9 +142,9 @@ body {
 }
 
 .profile img {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
+  width: 300px;
+  height: auto;
+  border-radius: 5%;
   object-fit: cover;
   box-shadow: var(--shadow);
 }
@@ -186,9 +186,8 @@ body {
 /* Dividers */
 hr {
   border: none;
-  height: 1px;
-  background: var(--border-color);
-  margin: 3rem 0;
+  border-top: 2px solid #ddd;
+  margin: 2rem 0;
 }
 
 /* Practice Areas Section */
@@ -197,13 +196,6 @@ hr {
   text-align: center;
   color: var(--text-main);
   margin-bottom: 1rem;
-}
-
-.divider {
-  width: 80px;
-  height: 3px;
-  background: var(--primary);
-  margin: 0 auto 3rem;
 }
 
 .practice-grid {
@@ -493,11 +485,13 @@ hr {
 
 /* Footer */
 footer {
-  background: var(--text-main);
-  color: var(--white);
   text-align: center;
-  padding: 2rem 0;
+  font-size: 0.75rem;
+  color: #999;
   margin-top: 3rem;
+  padding-top: 1.5rem 0;
+  padding-bottom: 1.5rem 0;
+  border-top: 1px solid #ddd;
 }
 
 /* Responsive Design */
