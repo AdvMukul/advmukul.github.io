@@ -54,7 +54,7 @@ body {
 }
 
 .site-logo {
-  height: 40px;
+  height: 70px;
   width: auto;
 }
 
@@ -322,8 +322,8 @@ footer {
   font-size: 0.75rem;
   color: #999;
   margin-top: 3rem;
-  padding-top: 1.5rem 0;
-  padding-bottom: 1.5rem 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   border-top: 1px solid #ddd;
 }
 
