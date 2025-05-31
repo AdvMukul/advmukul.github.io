@@ -271,9 +271,10 @@ hr {
 }
 
 .blog-slider {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
+  display: flex;
+  overflow-x: auto; /* Make it scroll horizontally */
+  gap: 1rem;
+  padding: 1rem 0;
 }
 
 .blog-slider-wrapper {
@@ -289,6 +290,7 @@ hr {
 }
 
 .blog-card {
+  width: 150px; /* Added this line */
   background: var(--white);
   margin: 0 1rem;
   border-radius: 10px;
@@ -297,6 +299,7 @@ hr {
   height: 300px;
   display: flex;
   align-items: center;
+  flex-shrink: 0; /* Prevent shrinking in scroll */
 }
 
 .blog-card:hover {
@@ -400,9 +403,10 @@ hr {
 }
 
 .testimonials-carousel {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem 0;
 }
 
 .testimonials-wrapper {
@@ -411,14 +415,14 @@ hr {
 }
 
 .testimonial-card {
+  width: 120px; /* Added this line */
   background: var(--white);
-  padding: 2rem;
-  margin: 0 1rem;
   border-radius: 10px;
   box-shadow: var(--shadow);
-  min-width: 100%;
-  text-align: center;
-  position: relative;
+  padding: 1rem;
+  margin: 0 1rem;
+  font-size: 0.85rem;
+  flex-shrink: 0; /* Prevent shrinking in scroll */
 }
 
 .testimonial-card::before {
