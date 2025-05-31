@@ -235,6 +235,24 @@ hr {
   color: var(--text-main);
 }
 
+
+.icon-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.icon-title-row .icon {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.icon-title-row h3 {
+  margin: 0;
+}
+
 /* Blog Slider Section with Carousel */
 .blog-slider-section h2 {
   font-size: 2.5rem;
@@ -416,6 +434,34 @@ hr {
   color: var(--primary);
   font-weight: 600;
 }
+
+
+/* scrollable carousel*/
+.scroll-wrapper {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.scroll-wrapper > * {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  min-width: 300px;
+}
+
+/* Optional: Smooth scroll & hide scrollbar */
+.scroll-wrapper {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 /* Contact Section */
 #contact {
