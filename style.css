@@ -171,24 +171,30 @@ body {
   line-height: 1.7;
 }
 
-.links a {
+.contact-info a {
   color: var(--links);
   text-decoration: none;
   margin-right: 1rem;
   transition: var(--transition);
 }
 
-.links a:hover {
+.contact-info a:hover {
   color: var(--primary);
   text-decoration: underline;
 }
 
-.links {
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1rem;
+.contact-info {
+  text-align: right;
+  font-family: sans-serif;
+}
+
+.line {
+  margin: 0;
+}
+
+.links a {
+  margin-left: 8px; /* minimal space between Resume and LinkedIn */
+  text-decoration: none;
 }
 
 
