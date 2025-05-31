@@ -54,7 +54,7 @@ body {
 }
 
 .site-logo {
-  height: 40px;
+  height: 70px;
   width: auto;
 }
 
@@ -311,9 +311,9 @@ blockquote::before {
 }
 
 .author-avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+  width: 100px;
+  height: auto;
+  border-radius: 10%;
   object-fit: cover;
   box-shadow: var(--shadow);
 }
@@ -338,8 +338,8 @@ footer {
   font-size: 0.75rem;
   color: #999;
   margin-top: 3rem;
-  padding-top: 1.5rem 0;
-  padding-bottom: 1.5rem 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   border-top: 1px solid #ddd;
 }
 
