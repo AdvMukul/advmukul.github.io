@@ -384,33 +384,11 @@ hr {
   font-weight: 600;
 }
 
-pasted
+/* Testimonials Section with Infinite Carousel */
+.testimonials-section {
+    margin: 3rem 0;
+}
 
-change the lines of code of testimonials carousel to make it look like the blog-slider-section.
-
-Edit
-I'll help you modify the testimonials carousel to match the blog-slider-section styling. Looking at your CSS, I can see the differences and will update the testimonials section accordingly.
-
-
-Updated Testimonials Section CSS
-Code 
-The key changes I made to align the testimonials carousel with the blog-slider-section:
-
-Fixed dimensions: Changed testimonial cards to width: 350px and height: 300px to match blog cards
-Added hover effects: Included the same translateY(-5px) and enhanced shadow on hover
-Improved layout structure: Added display: flex, flex-direction: column, justify-content: space-between for better content distribution
-Text overflow handling: Added -webkit-line-clamp: 6 to testimonial text to prevent overflow
-Consistent spacing: Made the gap, padding, and scroll behavior identical to the blog slider
-Responsive consistency: Updated media queries to match the blog section's responsive behavior
-The testimonials carousel will now have the same visual consistency, smooth scrolling behavior, and responsive design as your blog slider section while maintaining the unique testimonial styling elements like the quotation mark.
-
-
-
-
-
-
-
-/* Testimonials Section with Carousel - Updated to match blog-slider-section */
 .testimonials-section h2 {
   font-size: 2.5rem;
   text-align: center;
@@ -418,18 +396,29 @@ The testimonials carousel will now have the same visual consistency, smooth scro
   margin-bottom: 3rem;
 }
 
-.testimonials-carousel {
-  display: flex;
-  overflow-x: auto;
-  gap: 1.5rem;
-  padding: 1rem 0;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
+.testimonials-carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
-.testimonials-carousel::-webkit-scrollbar {
-  display: none;
+.testimonials-carousel {
+  display: flex;
+  animation: infiniteScroll 30s linear infinite;
+  width: calc(350px * 12 + 1.5rem * 11); /* Accommodate all cards including duplicates */
+}
+
+.testimonials-carousel:hover {
+  animation-play-state: paused;
+}
+
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-350px * 6 - 1.5rem * 5)); /* Move by original 6 cards width */
+  }
 }
 
 .testimonial-card {
@@ -443,10 +432,10 @@ The testimonials carousel will now have the same visual consistency, smooth scro
   flex-direction: column;
   overflow: hidden;
   flex-shrink: 0;
-  scroll-snap-align: start;
   padding: 2rem;
   justify-content: space-between;
   position: relative;
+  margin-right: 1.5rem;
 }
 
 .testimonial-card:hover {
@@ -483,31 +472,6 @@ The testimonials carousel will now have the same visual consistency, smooth scro
   flex-shrink: 0;
 }
 
-.read-more-tile {
-  background: var(--primary);
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  border-radius: 10px;
-  width: 350px;
-  height: 300px;
-  transition: var(--transition);
-  flex-shrink: 0;
-  scroll-snap-align: start;
-}
-
-.read-more-tile:hover {
-  background: var(--links);
-  transform: translateY(-5px);
-}
-
-.read-more-btn {
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
 
 /* Contact Section */
 #contact {
@@ -621,11 +585,22 @@ footer {
   .blog-card,
   .read-more-tile {
     width: 280px;
+}
+
+.testimonial-card {
+  width: 280px;
+}
+
+.testimonials-carousel {
+  width: calc(280px * 12 + 1.5rem * 11);
+}
+
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0);
   }
-  
- .testimonial-card,
-  .testimonials-section .read-more-tile {
-    width: 280px;
+  100% {
+    transform: translateX(calc(-280px * 6 - 1.5rem * 5));
   }
   
   #contact {
@@ -652,9 +627,20 @@ footer {
   .read-more-tile {
     width: 250px;
   }
-  
-  .testimonial-card,
-  .testimonials-section .read-more-tile {
-    width: 250px;
+
+.testimonial-card {
+width: 250px;
+}
+
+.testimonials-carousel {
+  width: calc(250px * 12 + 1.5rem * 11);
+}
+
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 6 - 1.5rem * 5));
   }
 }
