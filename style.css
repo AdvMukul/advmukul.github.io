@@ -383,7 +383,33 @@ hr {
   font-weight: 600;
 }
 
-/* Testimonials Section with Carousel */
+pasted
+
+change the lines of code of testimonials carousel to make it look like the blog-slider-section.
+
+Edit
+I'll help you modify the testimonials carousel to match the blog-slider-section styling. Looking at your CSS, I can see the differences and will update the testimonials section accordingly.
+
+
+Updated Testimonials Section CSS
+Code 
+The key changes I made to align the testimonials carousel with the blog-slider-section:
+
+Fixed dimensions: Changed testimonial cards to width: 350px and height: 300px to match blog cards
+Added hover effects: Included the same translateY(-5px) and enhanced shadow on hover
+Improved layout structure: Added display: flex, flex-direction: column, justify-content: space-between for better content distribution
+Text overflow handling: Added -webkit-line-clamp: 6 to testimonial text to prevent overflow
+Consistent spacing: Made the gap, padding, and scroll behavior identical to the blog slider
+Responsive consistency: Updated media queries to match the blog section's responsive behavior
+The testimonials carousel will now have the same visual consistency, smooth scrolling behavior, and responsive design as your blog slider section while maintaining the unique testimonial styling elements like the quotation mark.
+
+
+
+
+
+
+
+/* Testimonials Section with Carousel - Updated to match blog-slider-section */
 .testimonials-section h2 {
   font-size: 2.5rem;
   text-align: center;
@@ -406,14 +432,25 @@ hr {
 }
 
 .testimonial-card {
-  width: 300px;
+  width: 350px;
+  height: 300px;
   background: var(--white);
   border-radius: 10px;
   box-shadow: var(--shadow);
-  padding: 2rem;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   flex-shrink: 0;
   scroll-snap-align: start;
+  padding: 2rem;
+  justify-content: space-between;
   position: relative;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 .testimonial-card::before {
@@ -432,10 +469,42 @@ hr {
   margin-bottom: 1.5rem;
   font-style: italic;
   color: var(--text-main);
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .testimonial-card strong {
   color: var(--primary);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.read-more-tile {
+  background: var(--primary);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 10px;
+  width: 350px;
+  height: 300px;
+  transition: var(--transition);
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+.read-more-tile:hover {
+  background: var(--links);
+  transform: translateY(-5px);
+}
+
+.read-more-btn {
+  text-align: center;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
@@ -553,8 +622,9 @@ footer {
     width: 280px;
   }
   
-  .testimonial-card {
-    width: 250px;
+ .testimonial-card,
+  .testimonials-section .read-more-tile {
+    width: 280px;
   }
   
   #contact {
@@ -582,7 +652,8 @@ footer {
     width: 250px;
   }
   
-  .testimonial-card {
-    width: 220px;
+  .testimonial-card,
+  .testimonials-section .read-more-tile {
+    width: 250px;
   }
 }
