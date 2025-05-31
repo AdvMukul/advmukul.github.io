@@ -58,7 +58,7 @@
         <div class="practice-grid">
 <div class="practice-card">
   <div class="icon-title-row">
-  <div class="icon">💲</div>
+  <div class="icon">⚖</div>
   <h3>CRIMINAL LAW</h3>
   </div>
   <p>I provide legal support and defence in criminal matters, helping clients navigate charges ranging from minor offenses to serious allegations. My focus is on ensuring your rights are protected and that you receive a fair and just outcome.</p>
@@ -66,7 +66,7 @@
             
   <div class="practice-card">
        <div class="icon-title-row">
-  <div class="icon">⚙️</div>
+  <div class="icon">📜</div>
   <h3>CIVIL DISPUTES</h3>
        </div>    
   <p>I assist individuals in resolving civil disputes, including contract disagreements, personal injury claims, and other non-criminal legal issues. Whether through negotiation or court proceedings, I work to achieve practical and fair solutions.</p>
@@ -190,36 +190,72 @@
 
 <hr>
 <section class="testimonials-section">
-<h2>Testimonials</h2>
-<div class="testimonials-carousel">
-    <div class="testimonial-card">
-      <p>"Mukul is one of the most confident people I've met—unafraid of challenges and always eager to try new things to improve his performance. He's also highly social and maintains strong relationships with those around him."</p>
-      <strong>- Client A</strong>
-    </div>
-    <div class="testimonial-card">
-      <p>"Mukul's sharp attention to detail and strong focus allow him to consistently identify subtle nuances, greatly enriching the quality of his work."</p>
-      <strong>- Client B</strong>
-    </div>
-    <div class="testimonial-card">
-      <p>"Mukul's legal acumen and clarity of thought are exceptional. He ensures that every interaction is meaningful and solutions-driven."</p>
-      <strong>- Client C</strong>
-    </div>
-     <div class="testimonial-card">
-      <p>"Mukul is one of the most confident people I've met—unafraid of challenges and always eager to try new things to improve his performance. He's also highly social and maintains strong relationships with those around him."</p>
-      <strong>- Client D</strong>
-    </div>
-    <div class="testimonial-card">
-      <p>"Mukul's sharp attention to detail and strong focus allow him to consistently identify subtle nuances, greatly enriching the quality of his work."</p>
-      <strong>- Client E</strong>
-    </div>
-    <div class="testimonial-card">
-      <p>"Mukul's legal acumen and clarity of thought are exceptional. He ensures that every interaction is meaningful and solutions-driven."</p>
-      <strong>- Client F</strong>
-    </div>
+        <h2>Testimonials</h2>
+        <div class="testimonials-carousel-wrapper">
+            <div class="testimonials-carousel" id="testimonialsCarousel">
+                <!-- Original testimonials -->
+                <div class="testimonial-card">
+                    <p>"Mukul is one of the most confident people I've met—unafraid of challenges and always eager to try new things to improve his performance. He's also highly social and maintains strong relationships with those around him."</p>
+                    <strong>- Client A</strong>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Mukul's sharp attention to detail and strong focus allow him to consistently identify subtle nuances, greatly enriching the quality of his work."</p>
+                    <strong>- Client B</strong>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Mukul's legal acumen and clarity of thought are exceptional. He ensures that every interaction is meaningful and solutions-driven."</p>
+                    <strong>- Client C</strong>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Mukul is one of the most confident people I've met—unafraid of challenges and always eager to try new things to improve his performance. He's also highly social and maintains strong relationships with those around him."</p>
+                    <strong>- Client D</strong>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Mukul's sharp attention to detail and strong focus allow him to consistently identify subtle nuances, greatly enriching the quality of his work."</p>
+                    <strong>- Client E</strong>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Mukul's legal acumen and clarity of thought are exceptional. He ensures that every interaction is meaningful and solutions-driven."</p>
+                    <strong>- Client F</strong>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</div>
-</section>        
-    <hr>
+    <script>
+        // JavaScript for infinite carousel functionality
+        let carousel = document.getElementById('testimonialsCarousel');
+
+        // Duplicate testimonials for seamless loop
+        function duplicateTestimonials() {
+            const originalCards = Array.from(carousel.children);
+            
+            // Clone all cards and append them
+            originalCards.forEach(card => {
+                const clone = card.cloneNode(true);
+                carousel.appendChild(clone);
+            });
+        }
+
+        // Initialize the carousel
+        function initCarousel() {
+            duplicateTestimonials();
+        }
+
+        // Auto-pause on hover
+        carousel.addEventListener('mouseenter', () => {
+            carousel.style.animationPlayState = 'paused';
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+            carousel.style.animationPlayState = 'running';
+        });
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', initCarousel);
+    </script>
+    
+<hr>
             <section id="contact">
       <h2>Contact Me</h2>
       <form action="https://formspree.io/f/mnndzwdg" method="POST" class="contact-form">
