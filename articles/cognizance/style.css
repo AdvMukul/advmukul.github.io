@@ -1,15 +1,15 @@
 /* CSS Variables */
 :root {
-    --background: #f4f4f4;
-    --links: #aa1b35;
-    --primary: #c8576c;
-    --text-main: #494b57;
-    --white: #ffffff;
-    --light-gray: #e8e8e8;
-    --dark-gray: #333333;
-    --border-color: #ddd;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
+  --background: #f4f4f4;
+  --links: #9a762b;
+  --primary: #cf9f36;
+  --text-main: #393944;
+  --white: #ffffff;
+  --light-gray: #e8e8e8;
+  --dark-gray: #333333;
+  --border-color: #ddd;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
 }
 
 /* Reset and Base Styles */
