@@ -111,29 +111,6 @@ body {
   padding: 6rem 2rem 2rem;
 }
 
-/* Page Heading */
-.page-heading {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.page-heading h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--text-main);
-  letter-spacing: 0.2em;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-.page-heading hr {
-  width: 100px;
-  height: 3px;
-  background: var(--primary);
-  border: none;
-  margin: 0 auto;
-}
-
 /* Profile Section */
 .profile {
   display: flex;
