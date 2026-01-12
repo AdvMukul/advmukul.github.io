@@ -20,7 +20,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: Times New Roman;
   line-height: 1.6;
   color: var(--text-main);
   background-color: var(--background);
@@ -129,24 +129,25 @@ body {
 }
 
 .info h1 {
-  font-size: 2.5rem;
+  font-size: 4rem;
   color: var(--text-main);
   margin-bottom: 1rem;
 }
 
 .profession {
   color: var(--primary);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .practice-place {
   color: var(--text-main);
   font-style: italic;
+  font-size; 1.2rem
 }
 
 .description {
   margin: 1.5rem 0;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.7;
 }
 
@@ -314,7 +315,7 @@ hr {
 
 .blog-card h3 {
   color: var(--text-main);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
   font-weight: 600;
   line-height: 1.3;
@@ -328,7 +329,7 @@ hr {
 .overview {
   color: var(--text-main);
   line-height: 1.5;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   flex-grow: 1;
   display: -webkit-box;
   -webkit-line-clamp: 6;
